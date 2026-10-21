@@ -96,7 +96,7 @@ main section { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
   font-weight: 700;
   text-decoration: none;
 }
-.button:hover { background: var(--navy); color: var(--page); }
+.button:hover { background: #fde4ec; color: #4a1d2e; }
 /* The blue circle is the global symbol for diabetes awareness */
 .hero-ring { width: 100%; max-width: 22rem; justify-self: center; }
 .hero-ring circle { fill: none; stroke: var(--blue); stroke-width: 26; }
@@ -171,3 +171,11 @@ main section { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
   .card.is-flipped .card-back { opacity: 1; }
 }
 /* ===== END insulin-cards ===== */
+/* ===== FEATURE: resources-footer ===== */
+.resources { border-top: 1px solid var(--line); }
+.resource-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; max-width: 42rem; }
+.resource-list a { font-family: var(--font-head); font-weight: 600; font-size: 1.25rem; color: var(--blue); }
+.resource-list p { margin: 0.25rem 0 0; color: var(--muted); }
+.site-footer { padding: 2rem 1.5rem; background: #fde4ec; color: #4a1d2e; }
+.site-footer p { max-width: 72rem; margin: 0 auto; font-size: 0.95rem; }
+/* ===== END resources-footer ===== */
