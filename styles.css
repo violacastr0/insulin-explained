@@ -105,3 +105,13 @@ main section { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
   .hero-ring { max-width: 10rem; grid-row: 1; justify-self: start; }
 }
 /* ===== END hero ===== */
+/* ===== FEATURE: diabetes-basics ===== */
+.basics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}
+.basics-grid article { border-top: 4px solid var(--blue); padding-top: 1rem; }
+.basics-grid h3 { font-size: 1.35rem; margin: 0 0 0.5rem; }
+.basics-grid p { margin: 0; color: var(--muted); }
+/* ===== END diabetes-basics ===== */
