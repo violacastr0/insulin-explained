@@ -59,8 +59,92 @@
       </div>
     </section>
     <!-- ===== END diabetes-basics ===== -->
+    <!-- ===== FEATURE: insulin-cards (branch: feature/insulin-cards) ===== -->
+    <section class="tools" id="tools">
+      <h2>Insulin tools</h2>
+      <p class="lead">Tap or click a card to flip it.</p>
+
+      <div class="card-grid">
+
+        <div class="card" role="button" tabindex="0" aria-pressed="false" aria-label="Vial and syringe, flip for details">
+          <div class="card-inner">
+            <div class="card-face card-front" aria-hidden="false">
+              <div class="card-media">
+                <img src="images/vial-syringe.svg" alt="A glass insulin vial next to an insulin syringe marked in units">
+              </div>
+              <h3>Vial and syringe</h3>
+              <p>The original method: draw each dose by hand.</p>
+              <span class="flip-hint">Tap to flip</span>
+            </div>
+            <div class="card-face card-back" aria-hidden="true">
+              <h3>Vial and syringe</h3>
+              <p>Insulin is drawn from a small glass vial into a syringe marked in units, then injected just under the skin.</p>
+              <h4>Good to know</h4>
+              <ul>
+                <li>Widely available and often the lowest-cost option</li>
+                <li>Some insulin types can be mixed in one syringe</li>
+                <li>Each dose is measured by hand, so it takes practice</li>
+              </ul>
+              <span class="flip-hint">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" role="button" tabindex="0" aria-pressed="false" aria-label="Insulin pen, flip for details">
+          <div class="card-inner">
+            <div class="card-face card-front" aria-hidden="false">
+              <div class="card-media">
+                <img src="images/insulin-pen.png" alt="An insulin pen with labeled cap, needle, cartridge holder, dose window, dose knob and injection button">
+              </div>
+              <h3>Insulin pen</h3>
+              <p>Dial a dose and press a button.</p>
+              <span class="flip-hint">Tap to flip</span>
+            </div>
+            <div class="card-face card-back" aria-hidden="true">
+              <h3>Insulin pen</h3>
+              <p>A pen holds a cartridge of insulin. You attach a fresh needle, turn the dose knob until the dose window shows your dose, then press the injection button.</p>
+              <h4>Good to know</h4>
+              <ul>
+                <li>Small and easy to carry</li>
+                <li>Dialing a dose is simpler than measuring with a syringe</li>
+                <li>Often costs more, and different insulins can’t be mixed</li>
+              </ul>
+              <span class="flip-hint">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" role="button" tabindex="0" aria-pressed="false" aria-label="Insulin pump, flip for details">
+          <div class="card-inner">
+            <div class="card-face card-front" aria-hidden="false">
+              <div class="card-media">
+                <img src="images/insulin-pump.png" alt="An insulin pump connected by thin tubing to an adhesive infusion set">
+              </div>
+              <h3>Insulin pump</h3>
+              <p>A small device that delivers insulin all day.</p>
+              <span class="flip-hint">Tap to flip</span>
+            </div>
+            <div class="card-face card-back" aria-hidden="true">
+              <h3>Insulin pump</h3>
+              <p>A pump sends small amounts of rapid-acting insulin through thin tubing into a soft tube under the skin, held by an adhesive patch called an infusion set. You program extra insulin for meals.</p>
+              <h4>Good to know</h4>
+              <ul>
+                <li>Fewer injections; the infusion set is changed every few days</li>
+                <li>Some pumps work with a glucose sensor to adjust insulin</li>
+                <li>Needs training, and you wear the device most of the time</li>
+              </ul>
+              <span class="flip-hint">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===== END insulin-cards ===== -->
 
   </main>
+  <!-- Added on branch feature/insulin-cards -->
+  <script src="script.js" defer></script>
 
 </body>
 </html>

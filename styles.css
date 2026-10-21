@@ -115,3 +115,59 @@ main section { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
 .basics-grid h3 { font-size: 1.35rem; margin: 0 0 0.5rem; }
 .basics-grid p { margin: 0; color: var(--muted); }
 /* ===== END diabetes-basics ===== */
+/* ===== FEATURE: insulin-cards ===== */
+.tools { border-top: 1px solid var(--line); }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.75rem;
+}
+.card { display: grid; perspective: 1200px; cursor: pointer; border-radius: 1.25rem; }
+.card-inner {
+  display: grid;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.card.is-flipped .card-inner { transform: rotateY(180deg); }
+/* Both faces share one grid cell, so the card grows to fit the taller face */
+.card-face {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.card-back { transform: rotateY(180deg); background: var(--sky); }
+.card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  overflow: hidden;
+}
+.card-media img { height: 100%; width: 100%; object-fit: contain; min-height: 0; }
+.card-media.is-missing::after { content: "Add an image to /images"; color: #4a5568; font-size: 0.9rem; }
+.card-media.is-missing img { display: none; }
+.card h3 { font-size: 1.4rem; margin: 0 0 0.4rem; }
+.card h4 { font-family: var(--font-head); color: var(--navy); margin: 1rem 0 0.4rem; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); }
+.card ul { margin: 0; padding-left: 1.2rem; color: var(--text); }
+.card li + li { margin-top: 0.35rem; }
+.flip-hint { margin-top: auto; padding-top: 1.25rem; font-weight: 700; color: var(--blue); }
+.card:hover .card-face { border-color: var(--blue); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card-inner { transition: none; transform: none !important; }
+  .card-face { backface-visibility: visible; transform: none; transition: opacity 0.2s; }
+  .card .card-back { opacity: 0; }
+  .card.is-flipped .card-front { opacity: 0; }
+  .card.is-flipped .card-back { opacity: 1; }
+}
+/* ===== END insulin-cards ===== */
