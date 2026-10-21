@@ -1,0 +1,49 @@
+/* ===== BASE (already on main) ===== */
+:root {
+  --navy: #12305a;
+  --blue: #2b6cd4;
+  --sky: #eaf2fc;
+  --amber: #f2b544;
+  --text: #1c2533;
+  --muted: #4a5568;
+  --surface: #ffffff;
+  --page: #f7f9fc;
+  --line: #d6e2f3;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-head: "Bricolage Grotesque", "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navy: #cfe0fa;
+    --blue: #6fa2f0;
+    --sky: #17243a;
+    --text: #e6ecf5;
+    --muted: #a9b6c9;
+    --surface: #1b2840;
+    --page: #0f1829;
+    --line: #2c3d5c;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page);
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 { font-family: var(--font-head); color: var(--navy); line-height: 1.15; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin: 0 0 0.5rem; }
+
+main section { max-width: 72rem; margin: 0 auto; padding: 4rem 1.5rem; }
+.lead { max-width: 42rem; color: var(--muted); margin: 0 0 2rem; }
+
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+/* ===== END BASE ===== */
